@@ -1,0 +1,41 @@
+<% include partials/header %>
+<div class = "container"> 
+      <header >
+        <div class = "panel panel-primary">
+         <div class = "panel-heading">
+             <h3 class = "panel-title">VIEW Description</h3>
+        </div>
+        </div>
+     </header>
+     <div  class="btn btn-secondary" class = "caption">
+        <ul> <a  class = "btn btn-primary" href="/description/new" > ADD NEW DESCRIPTION </a> </ul>
+      </div>
+ <div class = "container"> 
+ 
+    <div class = "row" style ="display:flex; flex-wrap:wrap;">
+        <% Animal.forEach(function(Animal){ %>
+                    <div class = "col-md-3 col-sm-6">
+                      <ul>
+                           <div class = "thumbnail" class = "Pagination">
+                            <img src = "<%= Animal.image %>">
+                            <div class = "caption">
+                              <ul> 
+                                     <%= Animal.commonname %>
+                                     <div> 
+                                        <a type="button" class="btn btn-warning btn-block"  href="/description/<%= Animal._id %>/edit"> UPDATE </a> 
+                                        </div>
+                                        <div>
+                                        <a type="button" class="btn btn-danger btn-block"  href="/description/delete/<%= Animal._id %>"> DELETE </a>
+                                         </div>
+                              </ul>
+                            </div>
+                           </div> 
+                      </ul>
+                    </div>
+           <% }); %>
+   </div>
+  </div>
+  
+  
+  
+<% include partials/footer %>

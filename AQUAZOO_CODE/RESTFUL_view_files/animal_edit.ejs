@@ -1,0 +1,49 @@
+<% include ./partials/header %> 
+<style>
+.container.main {
+   margin-top:  7.0em; 
+}
+</style>
+
+
+<div class = "ui main text container segnment" > 
+
+     <div class = "ui huge header"> Edit <%= Animal._id %></div>
+     <form class = "ui form" action = "/Animal/<%= Animal._id %>?_method=PUT" method = "POST"> 
+     
+     <div class = "field">
+         <label> Age </label>
+        <input type = "text" name = "Animal[age]" placeholder = "<%= Animal.age %>" required>  
+    </div>
+    
+     <div class = "field">
+         <label> Weight </label>
+        <input type = "text" name = "Animal[weight]" placeholder = "<%= Animal.weight %>" required>  
+    </div>
+    
+     <div class = "field">
+         <label> Size </label>
+        <input type = "text" name = "Animal[size]" placeholder = "<%= Animal.size %>" required>  
+    </div>
+    
+     <div class = "field">
+         <label> Gender </label>
+        <input type = "text" name = "Animal[gender]" placeholder = "<%= Animal.gender %>" required>  
+    </div>
+    
+      <div class = "field">
+         <label> location </label>
+        <input type = "text" name = "Animal[location]" placeholder = "<%= Animal.location %>" required>  
+    </div>
+    
+      <div class = "field">
+         <label> sid </label>
+        <input class="form-control" type = "text" name = "Animal[sid]" value = "<%= Animal.sid %>" placeholder = "<%= Animal.sid %>" disabled>
+      </div>
+
+        <input class = "ui basic violet button" type = "submit">  
+   
+    </form>
+</div>
+
+<% include ./partials/footer %> 

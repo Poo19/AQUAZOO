@@ -1,0 +1,28 @@
+<% include partials/header %>
+               <div class = "thumbnail">
+                   <div>
+                     <h1> <%= Animal.commonname %> </h1>
+                     </div>
+                    <img src = "<%= Animal.image %>">
+>
+                        <div class = "caption">
+                           <p>  commonname :  <%= Animal.commonname %>  </p>        
+                           <p>  scientific_name : <%= Animal.scientific_name %>  </p>    
+                           <p>  type :  <%= Animal.type %>  </p>                  
+                                    
+                           <p>  average_lifespan : <%= Animal.average_lifespan %>  </p>    
+                           <p>  avg_weight : <%= Animal.avg_weight %>  </p>           
+                            <p>  avg_size : <%= Animal.avg_size %>  </p>              
+                                    
+                            <p>  habitat : <%= Animal.habitat %>  </p>             
+                            <p>  continent : <%= Animal.continent   %>  </p>           
+                            <p>  classification : <%= Animal.classification %>  </p>      
+                                
+                            <p>  status_of_conservation  :  <%= Animal.status_of_conservation %>  </p>   
+                            <p>  <%= Animal.text  %> </p>                    
+                        </div>
+               </div> 
+            
+              <ul> <a href="/Animals"> Back to Animals</a> </ul>
+
+<% include partials/footer %>

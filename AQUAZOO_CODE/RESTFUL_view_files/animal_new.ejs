@@ -1,0 +1,54 @@
+<% include ./partials/header %> 
+<style>
+.container.main {
+   margin-top:  7.0em; 
+}
+</style>
+
+
+<div class = "ui main text container segnment" > 
+
+     <div class = "ui huge header"> NEW ANIMAL </div>
+     <form class = "ui form" action = "/Animal" method = "POST"> 
+     
+     <div class = "field">
+         <label> Age </label>
+        <input type = "text" name = "Animal[age]" placeholder = " Animal.age " required>  
+    </div>
+    
+     <div class = "field">
+         <label> Weight </label>
+        <input type = "text" name = "Animal[weight]" placeholder = " Animal.weight" required>  
+    </div>
+    
+     <div class = "field">
+         <label> Size </label>
+        <input type = "text" name = "Animal[size]" placeholder = "Animal.size" required>  
+    </div>
+    
+    <select class = "field"  class="ui dropdown" name = "Animal[gender]" >
+          <option value="">Gender</option>
+          <option  value="Male">Male</option>
+          <option  value="Female">Female</option>
+    </select>
+    
+      <div class = "field">
+         <label> location </label>
+        <input type = "text" name = "Animal[location]" placeholder = "Animal.location" required>  
+    </div>
+    
+     <select class = "field"  class="ui dropdown" name = "Animal[commonname]" >
+            <option value="">Common Name</option>
+             <% description.forEach(function(description){ %>
+                    <option  value="<%= description.commonname %>" > <%= description.commonname %> </option>
+             <% }); %>
+     </select>
+      
+      <div class = "field">
+        <input class = "ui basic violet button" type = "submit">  
+      </div>
+      
+    </form>
+</div>
+
+<% include ./partials/footer %> 

@@ -1,0 +1,42 @@
+<% include partials/header %>
+<div class="row">
+    <div class="col-sm-4" style="background-color:lavender;">
+               <div class = "thumbnail">
+                   <div>
+                     <h1> <%= Animal._id %> </h1>
+                     </div>
+                        <div class = "caption">
+                            <p> Animal age : <%= Animal.age %>      </p>
+                            <p> Animal weight :  <%= Animal.weight %> </p>
+                            <p> Animal size : <%= Animal.size %>     </p>
+                            <p> Animal gender  : <%= Animal.gender %> </p>
+                            <p> Animal location : <%= Animal.location %> </p>                  
+                        </div>
+               </div> 
+        </div> 
+        <div class="col-sm-4" style="background-color:lavender;">       
+               <div class = "thumbnail">
+                    <img src = "<%= description.image %>">
+                        <div class = "caption">
+                           <p>  commonname :  <%= description.commonname %>  </p>        
+                           <p>  scientific_name : <%= description.scientific_name %>  </p>    
+                           <p>  type :  <%= description.type %>  </p>                  
+                                    
+                           <p>  average_lifespan : <%= description.average_lifespan %>  </p>    
+                           <p>  avg_weight : <%= description.avg_weight %>  </p>           
+                            <p>  avg_size : <%= description.avg_size %>  </p>              
+                                    
+                            <p>  habitat : <%= description.habitat %>  </p>             
+                            <p>  continent : <%= description.continent   %>  </p>           
+                            <p>  classification : <%= description.classification %>  </p>      
+                                
+                            <p>  status_of_conservation  :  <%= description.status_of_conservation %>  </p>   
+                           
+                        </div>
+               </div>
+        </div>
+      </div>
+            
+              <ul> <a href="/Animal"> <h2> Back to Animal IDs </h2></a> </ul>
+
+<% include partials/footer %>

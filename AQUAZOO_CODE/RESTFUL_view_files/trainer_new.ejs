@@ -1,0 +1,48 @@
+<% include ./partials/header %> 
+<style>
+.container.main {
+   margin-top:  7.0em; 
+}
+</style>
+
+
+<div class = "ui main text container segnment" > 
+
+     <div class = "ui huge header"> ADD NEW TRAINER  </div>
+     
+     <form class = "ui form" action = "/trainer" method = "POST">
+     
+     
+   <div class = "field">
+         <label> LAST NAME </label>
+        <input type = "text" name = "Trainer[Lname]" placeholder = " Last Name" required>  
+   </div> 
+    <div class = "field">
+         <label> FIRST NAME </label>
+        <input type = "text" name = "Trainer[Fname]" placeholder = "First Name"  required>  
+   </div> 
+   <div class = "field">
+         <label> IMAGE </label>
+        <input type = "text" name = "Trainer[image]" placeholder = "Image" required>  
+   </div>
+   <div class = "field">
+         <label> SALARY </label>
+        <input type = "text" name = "Trainer[salary]" placeholder = "Salary"  required>  
+   </div>
+   
+    <select class = "field"  class="ui dropdown" name = "Trainer[AID]" >
+            <option value="">CHOOSE ANIMAL </option>
+             <% Animal.forEach(function(Animal){ %>
+                    <option  value="<%= Animal._id %>" > <%= Animal._id %> </option>
+             <% }); %>
+     </select>
+   
+   
+      <div class = "field">
+        <input class = "ui basic violet button" type = "submit">  
+      </div>
+      
+    </form>
+</div>
+
+<% include ./partials/footer %> 

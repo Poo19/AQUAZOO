@@ -1,0 +1,27 @@
+ <% include partials/header %>
+ 
+  <div class = "row" style ="display:flex; flex-wrap:wrap;">
+      
+                    <div class = "col-md-6 col-sm-6">
+                      <ul>
+                           <div class = "thumbnail" class = "Pagination">
+                             <ul>
+                                <h2 class= "btn btn-primary " > Sponsorship ID   : <%= Sponsorship._id %> </h2> 
+                                </ul>
+                                 <ul>
+                                <h3 class= "btn btn-info " > Animal Sponsord To   :   <%= Sponsorship.AID %> </h5> 
+                                </ul>
+                                 <ul>
+                                <h3 class= "btn btn-info " > Start date :   <%= Sponsorship.startdate %> </h5>
+                                </ul>
+                                 <ul>
+                                <h3 class= "btn btn-info " > End Date   :    <%= Sponsorship.lastdate %> </h5> 
+                                </ul>
+                                <h3 class= "btn btn-info " > Amount     :     <%= Sponsorship.amount %> Dollars </h5> 
+                               </ul>
+                               
+                           </div> 
+                      </ul>
+                    </div>
+   </div>
+<% include partials/footer %>

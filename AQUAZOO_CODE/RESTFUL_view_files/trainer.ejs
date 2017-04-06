@@ -1,0 +1,51 @@
+<% include partials/header %>
+<div class = "container"> 
+      <header >
+        <div class = "panel panel-primary">
+         <div class = "panel-heading">
+             <h3 class = "panel-title">VIEW TRAINERS </h3>
+        </div>
+        </div>
+     </header>
+     
+    <div  class="btn btn-secondary" class = "caption">
+        <ul> <a  class = "btn btn-primary" href="/NEW_TRAINER" > ADD NEW TRAINER </a> </ul>
+    </div>
+    </div>
+     
+ 
+ <div class = "container"> 
+ 
+    <div class = "row" style ="display:flex; flex-wrap:wrap;">
+        <% Trainer.forEach(function(Trainer){ %>
+                    <div class = "col-md-3 col-sm-6">
+                      <ul>
+                           <div class = "thumbnail" >
+                               <img src = "<%= Trainer.image %>">
+                            <div class = "caption">
+                              <ul> 
+                                     <p>
+                                     <div> 
+                                         <a  class = "btn btn-primary" href="/trainer/<%= Trainer._id %>"> READ </a>
+                                     </div>
+                                      </p>
+                                       <p>
+                                        <div> 
+                                         <a  class = "btn btn-warning" href="/trainer/<%= Trainer._id %>/edit"> UPDATE </a> 
+                                        </div>
+                                         </p>
+                                         <p>
+                                        <div>
+                                         <a  class = "btn btn-danger" href="/trainer/delete/<%= Trainer._id %>"> DELETE </a> 
+                                       </div>
+                                        </p>
+                              </ul>
+                            </div>
+                           </div> 
+                      </ul>
+                    </div>
+           <% }); %>
+   </div>
+ 
+  
+<% include partials/footer %>

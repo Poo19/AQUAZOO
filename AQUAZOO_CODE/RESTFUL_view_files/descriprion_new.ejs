@@ -1,0 +1,79 @@
+<% include ./partials/header %> 
+<style>
+.container.main {
+   margin-top:  7.0em; 
+}
+</style>
+
+
+<div class = "ui main text container segnment" > 
+     <div class = "ui huge header"> New Description</div>
+     <form class = "ui form" action = "/description" method = "POST"> 
+     
+     
+             <div class = "field">
+         <label> commonname </label>
+         <input type = "text" name = "description[commonname]" placeholder = "commonname " required> 
+    </div>
+    
+     <div class = "field">
+         <label> Image </label>
+        <input type ="text" name = "description[image]" placeholder = "image" required>  
+    </div>
+    
+    <div class = "field">
+         <label> scientific_name </label>
+        <input type = "text" name = "description[scientific_name]" placeholder = "scientific_name" required>  
+    </div>
+    
+      <div class = "field">
+         <label> Type </label>
+        <input type = "text" name = "description[type]" placeholder = "description.type" required>  
+    </div>
+    
+      <div class = "field">
+         <label> average_lifespan </label>
+        <input type = "text" name = "description[average_lifespan]" placeholder = " description.average_lifespan" required>  
+    </div>
+    
+     <div class = "field">
+         <label> avg_weight </label>
+        <input type = "text" name = "description[avg_weight]" placeholder = "description.avg_weight" required>  
+    </div>
+    
+     <div class = "field">
+         <label> avg_size </label>
+        <input type = "text" name = "description[avg_size]" placeholder = "description.avg_size" required>  
+    </div>
+    
+     <div class = "field">
+         <label> habitat </label>
+        <input type = "text" name = "description[habitat]" placeholder = " description.habitat" required>  
+    </div>
+    
+     <div class = "field">
+         <label> continent </label>
+        <input type = "text" name = "description[continent]" placeholder = "description.continent" required>  
+    </div>
+    
+     <div class = "field">
+         <label> classification </label>
+        <input type = "text" name = "description[classification]" placeholder = "description.classification" required>  
+    </div>
+    
+     <div class = "field">
+         <label> status_of_conservation </label>
+        <input type = "text" name = "description[status_of_conservation]" placeholder = "description.status_of_conservation" required>  
+    </div>
+    
+    <div class = "field">
+         <label> text content </label>
+        <textarea  name = "description[text]"> </textarea>
+    </div>
+      
+        <input class = "ui basic violet button" type = "submit">  
+   
+    </form>
+</div>
+
+<% include ./partials/footer %> 

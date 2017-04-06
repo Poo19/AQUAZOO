@@ -1,0 +1,137 @@
+<% include ./partials/header %> 
+<style>
+.container.main {
+   margin-top:  7.0em; 
+}
+</style>
+
+
+<div class = "ui main text container segnment" > 
+
+     <div class = "ui huge header"> ADD NEW SPONSORER  </div>
+     <form class = "ui form" action = "/sponsor" method = "POST"> 
+     
+   <div class = "field">
+         <label> NAME </label>
+        <input type = "text" name = "name" placeholder = "Name" required>  
+   </div> 
+   
+   <div class = "field">
+         <label> IMAGE </label>
+        <input type = "text" name = "image" placeholder = "IMAGE" required>  
+   </div>
+   
+   <div class = "field">
+         <label> EMAIL </label>
+        <input type = "email" name = "email" placeholder = "EMAIL" required>  
+   </div>
+   
+     
+        <div class = "field">
+                 <label> START DATE </label>
+        </div>
+         
+    <select class = "field1" class="ui fluid search dropdown" name="startmonth">
+            <option value="" >Month</option>
+            <option value="0">January</option>
+            <option value="1">February</option>
+            <option value="2">March</option>
+            <option value="3">April</option>
+            <option value="4">May</option>
+            <option value="5">June</option>
+            <option value="6">July</option>
+            <option value="8">August</option>
+            <option value="7">September</option>
+            <option value="8">October</option>
+            <option value="9">November</option>
+            <option value="10">December</option>
+    </select>
+    
+    <select class = "field1" class="ui fluid search dropdown" name="startdate">
+            <option value=""  >Date</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+    </select>
+    
+    <select class = "field1" class="ui fluid search dropdown" name="startyear">
+        <option value=""  >Year</option>
+            <option value="2017">2017</option>
+            
+     </select>
+     
+     <div class = "field">
+                 <label> LAST DATE </label>
+        </div>
+         
+    <select class = "field1" class="ui fluid search dropdown" name="lastmonth">
+            <option value="" >Month</option>
+            <option value="0">January</option>
+            <option value="1">February</option>
+            <option value="2">March</option>
+            <option value="3">April</option>
+            <option value="4">May</option>
+            <option value="5">June</option>
+            <option value="6">July</option>
+            <option value="8">August</option>
+            <option value="7">September</option>
+            <option value="8">October</option>
+            <option value="9">November</option>
+            <option value="10">December</option>
+    </select>
+    
+    <select class = "field1" class="ui fluid search dropdown" name="lastdate">
+            <option value=""  >Date</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+    </select>
+    
+    <select class = "field1" class="ui fluid search dropdown" name="lastyear">
+        <option value=""  >Year</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+     </select>
+
+
+      <div class = "field">
+         <label> AMOUNT </label>
+        <input type = "text" name = "amount" placeholder = "Amount" required>  
+    </div>
+    
+     <select class = "field"  class="ui dropdown" name = "animal_id" >
+            <option value="">CHOOSE ANIMAL </option>
+             <% Animal.forEach(function(Animal){ %>
+                    <option  value="<%= Animal._id %>" > <%= Animal._id %> </option>
+             <% }); %>
+     </select>
+      
+      <div class = "field">
+        <input class = "ui basic violet button" type = "submit">  
+      </div>
+      
+    </form>
+</div>
+
+<% include ./partials/footer %> 

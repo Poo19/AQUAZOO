@@ -1,0 +1,25 @@
+<% include partials/header %>
+<style> 
+    img {
+      
+    }
+</style>
+
+            <div class = "thumbnail">
+                   <div>
+                     <h1><%= Trainer.Fname %>  <%= Trainer.Lname %> </h1>
+                     <img src = "<%= Trainer.image %>">
+                   </div>
+                    <div class = "caption">
+                         <h2> salary : <%= Trainer.salary %> </h2> 
+                    </div> 
+        
+                <div> Animal Trained : <%= Trainer.AID %> </div>
+             </div>  
+             
+             
+<ul> <h2> <a href="/trainer"> Back to Trainer</a> </h2> </ul>
+    
+                   
+
+<% include partials/footer %>

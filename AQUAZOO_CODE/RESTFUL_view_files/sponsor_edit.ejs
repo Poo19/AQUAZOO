@@ -1,0 +1,39 @@
+<% include ./partials/header %> 
+<style>
+.container.main {
+   margin-top:  7.0em; 
+}
+</style>
+
+
+<div class = "ui main text container segnment" > 
+
+     <div class = "ui huge header"> UPDATE THE PERSONAL INFO OF <p> <%= Sponsor.name%> </p>  </div>
+     
+     <form class = "ui form" action = "/sponsor/<%= Sponsor._id %>?_method=PUT" method = "POST">
+     
+     
+   <div class = "field">
+         <label> NAME </label>
+        <input type = "text" name = "Sponsor[name]" placeholder = "<%= Sponsor.name%>" value = "<%= Sponsor.name%>" required >  
+   </div> 
+   
+   <div class = "field">
+         <label> IMAGE </label>
+        <input type = "text" name = "Sponsor[image]" placeholder = "<%= Sponsor.image%>" value = "<%= Sponsor.image%>" required>  
+   </div>
+   
+   <div class = "field">
+         <label> EMAIL </label>
+        <input type = "email" name = "Sponsor[email]" placeholder = "<%= Sponsor.email%>" value = "<%= Sponsor.email%>"  required>  
+   </div>
+   
+    
+      <div class = "field">
+        <input class = "ui basic violet button" type = "submit">  
+      </div>
+      
+    </form>
+</div>
+
+<% include ./partials/footer %> 

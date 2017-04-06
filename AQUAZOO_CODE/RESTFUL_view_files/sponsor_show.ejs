@@ -1,0 +1,42 @@
+<% include partials/header %>
+<style> 
+    img {
+     
+    }
+</style>
+<div class="row">
+    <div class="col-sm-4" style="background-color:lavender;">
+               <div class = "thumbnail">
+                   <div class = "thumbnail">
+                     <h1> <%= Sponsor.name %> </h1>
+                   </div>
+                         <img src = "<%= Sponsor.image %>">
+
+                     <div class = "caption">
+                          <h2> Email : <%= Sponsor.email %> </h2> 
+                     </div> 
+                   </div>
+                 <ul> <h2> <a class = "btn btn-primary" href="/sponsorship/<%= Sponsor._id %>/new"> Add Sponserships </a> </h2> </ul>
+                 <ul> <h2> <a class = "btn btn-primary" href="/sponsor"> Back to Sponsors</a> </h2> </ul>
+    </div>
+                <div class="col-sm-4" style="background-color:lavender;">    
+                      
+                         <% Sponsor.Sponserships.forEach(function(Sponserships){ %>
+                            <h3> Sponserships : <%= Sponserships %> </h3> 
+                                    <div> 
+                                        <a type= "button" class = "btn btn-primary" href="/sponsorship/<%= Sponserships%>"> READ </a> 
+                                    </div>
+                                     <div> 
+                                        <a type= "button" class = "btn btn-warning" href="/sponsorship/<%= Sponserships %>/edit"> UPDATE </a> 
+                                     </div>
+                                    <div>
+                                        <a type= "button" class = "btn btn-danger" href="/delete/<%= Sponsor._id %>/<%= Sponserships %>"> DELETE </a>
+                                    </div>
+                         <% }); %>  
+                         
+                       
+               </div> 
+           
+             
+   </div>
+<% include partials/footer %>

@@ -1,0 +1,51 @@
+<% include partials/header %>
+<div class = "container"> 
+      <header >
+        <div class = "panel panel-primary">
+         <div class = "panel-heading">
+             <h3 class = "panel-title">VIEW ANIMALS </h3>
+        </div>
+        </div>
+     </header>
+     
+    <div  class="btn btn-secondary" class = "caption">
+        <ul> <a  class = "btn btn-primary" href="/NEW_ANIMAL" > ADD NEW ANIMAL </a> </ul>
+    </div>
+    </div>
+     
+ 
+ <div class = "container"> 
+ 
+    <div class = "row" style ="display:flex; flex-wrap:wrap;">
+        <% Animal.forEach(function(Animal){ %>
+                    <div class = "col-md-3 col-sm-6">
+                      <ul>
+                           <div class = "thumbnail" >
+                                <%= Animal._id %> 
+                            <div class = "caption">
+                              <ul> 
+                                     <p>
+                                     <div> 
+                                         <a  type="button" class="btn btn-info btn-block" href="/Animal/<%= Animal._id %>"> READ </a>
+                                     </div>
+                                      </p>
+                                       <p>
+                                        <div> 
+                                         <a type="button" class="btn btn-warning btn-block"  href="/Animal/<%= Animal._id %>/edit"> UPDATE </a> 
+                                        </div>
+                                         </p>
+                                         <p>
+                                        <div>
+                                         <a type="button" class="btn btn-danger btn-block"  href="/Animal/delete/<%= Animal._id %>"> DELETE </a> 
+                                       </div>
+                                        </p>
+                              </ul>
+                            </div>
+                           </div> 
+                      </ul>
+                    </div>
+           <% }); %>
+   </div>
+ 
+  
+<% include partials/footer %>
